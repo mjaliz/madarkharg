@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:madarkharg/main.dart';
+import 'package:madarkharg/widgets/chart/chart.dart';
 import 'package:madarkharg/widgets/expense/expense_list.dart';
 import 'package:madarkharg/models/expense.dart';
 import 'package:madarkharg/widgets/expense/new_expense.dart';
@@ -92,7 +93,7 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          const Text("The chart"),
+          Chart(expenses: _registeredExpenses),
           Expanded(
             child: mainContent,
           ),
